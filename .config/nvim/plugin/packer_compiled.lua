@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/home/thomas/.local/share/nvim/site/pack/packer/start/barbar.nvim",
     url = "https://github.com/romgrk/barbar.nvim"
   },
+  ["browse.nvim"] = {
+    loaded = true,
+    path = "/home/thomas/.local/share/nvim/site/pack/packer/start/browse.nvim",
+    url = "https://github.com/lalitmee/browse.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/thomas/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -134,15 +139,20 @@ _G.packer_plugins = {
     path = "/home/thomas/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  ["headlines.nvim"] = {
+  ["impatient.nvim"] = {
     loaded = true,
-    path = "/home/thomas/.local/share/nvim/site/pack/packer/start/headlines.nvim",
-    url = "https://github.com/lukas-reineke/headlines.nvim"
+    path = "/home/thomas/.local/share/nvim/site/pack/packer/start/impatient.nvim",
+    url = "https://github.com/lewis6991/impatient.nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/thomas/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["lsp_signature.nvim"] = {
+    loaded = true,
+    path = "/home/thomas/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
+    url = "https://github.com/ray-x/lsp_signature.nvim"
   },
   ["lspkind.nvim"] = {
     loaded = true,
@@ -215,6 +225,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/thomas/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-surround"] = {
+    loaded = true,
+    path = "/home/thomas/.local/share/nvim/site/pack/packer/start/nvim-surround",
+    url = "https://github.com/kylechui/nvim-surround"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -306,15 +321,10 @@ _G.packer_plugins = {
     path = "/home/thomas/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
-  ["vim-fugitive"] = {
+  ["vim-bbye"] = {
     loaded = true,
-    path = "/home/thomas/.local/share/nvim/site/pack/packer/start/vim-fugitive",
-    url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["vim-rhubarb"] = {
-    loaded = true,
-    path = "/home/thomas/.local/share/nvim/site/pack/packer/start/vim-rhubarb",
-    url = "https://github.com/tpope/vim-rhubarb"
+    path = "/home/thomas/.local/share/nvim/site/pack/packer/start/vim-bbye",
+    url = "https://github.com/moll/vim-bbye"
   },
   ["vim-sleuth"] = {
     loaded = true,
@@ -325,11 +335,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/thomas/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
-  },
-  ["zk-nvim"] = {
-    loaded = true,
-    path = "/home/thomas/.local/share/nvim/site/pack/packer/start/zk-nvim",
-    url = "https://github.com/mickael-menu/zk-nvim"
   }
 }
 

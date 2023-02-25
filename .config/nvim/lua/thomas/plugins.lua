@@ -66,6 +66,19 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
 
+	--------------------------------------------------------------------------------
+	--
+	-- UI and Colothemes
+	--
+	---------------------------------------------------------------------------------
+	use("navarasu/onedark.nvim") -- Theme inspired by Atom
+	use("nvim-lualine/lualine.nvim") -- Fancier statusline
+	use("lukas-reineke/indent-blankline.nvim") -- Add indentation guides even on blank lines
+	use("goolord/alpha-nvim") -- Greeter screen
+	use("nvim-tree/nvim-tree.lua") -- Tree Explorer
+	use("nvim-tree/nvim-web-devicons")
+	use("romgrk/barbar.nvim") -- tab bar
+
 	---------------------------------------------------------------------------------
 	--
 	-- LSP Configuration and Plugins
@@ -81,7 +94,7 @@ return packer.startup(function(use)
 		-- Additional lua configuration, makes nvim stuff amazing
 		"folke/neodev.nvim",
 	})
-
+	use("ray-x/lsp_signature.nvim")
 	use("mfussenegger/nvim-jdtls")
 
 	-- formatting & linting
@@ -90,6 +103,10 @@ return packer.startup(function(use)
 
 	-- show diagnostics
 	use("folke/trouble.nvim")
+
+	-- commenting
+	use("numToStr/Comment.nvim") -- "gc" to comment visual regions/lines
+
 	---------------------------------------------------------------------------------
 	--
 	-- Autocompletion
@@ -129,6 +146,8 @@ return packer.startup(function(use)
 		after = "nvim-treesitter",
 	})
 
+	use("windwp/nvim-autopairs") -- Autopair
+	use("kylechui/nvim-surround")
 	---------------------------------------------------------------------------------
 	--
 	-- Telescope
@@ -145,8 +164,6 @@ return packer.startup(function(use)
 	-- Git Version Control
 	--
 	---------------------------------------------------------------------------------
-	use("tpope/vim-fugitive")
-	use("tpope/vim-rhubarb")
 	use("TimUntersberger/neogit")
 	use("lewis6991/gitsigns.nvim")
 
@@ -155,16 +172,6 @@ return packer.startup(function(use)
 	-- Note Taking
 	--
 	---------------------------------------------------------------------------------
-	use("mickael-menu/zk-nvim")
-	use({
-		"iamcco/markdown-preview.nvim",
-		run = "cd app && yarn install",
-		setup = function()
-			vim.g.mkdp_filetypes = { "markdown" }
-		end,
-		ft = { "markdown" },
-	})
-	use("lukas-reineke/headlines.nvim")
 	use("nvim-orgmode/orgmode")
 
 	use({
@@ -174,23 +181,31 @@ return packer.startup(function(use)
 
 	--------------------------------------------------------------------------------
 	--
+	-- Tools
+	--
+	---------------------------------------------------------------------------------
+	use("akinsho/toggleterm.nvim")
+	use("lalitmee/browse.nvim")
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = "cd app && yarn install",
+		setup = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	})
+
+	--------------------------------------------------------------------------------
+	--
 	-- Utilities and Miscelaneous
 	--
 	---------------------------------------------------------------------------------
-	use("navarasu/onedark.nvim") -- Theme inspired by Atom
-	use("nvim-lualine/lualine.nvim") -- Fancier statusline
-	use("lukas-reineke/indent-blankline.nvim") -- Add indentation guides even on blank lines
-	use("numToStr/Comment.nvim") -- "gc" to comment visual regions/lines
 	use("tpope/vim-sleuth") -- Detect tabstop and shiftwidth automatically
-	use("goolord/alpha-nvim") -- Greeter screen
-	use("windwp/nvim-autopairs") -- Autopair
-	use("nvim-tree/nvim-tree.lua") -- Tree Explorer
-	use("nvim-tree/nvim-web-devicons")
 	use("folke/which-key.nvim") -- Show popup with possbile key bindings
-	use("romgrk/barbar.nvim") -- tab bar
-	use("akinsho/toggleterm.nvim")
 	use("mbbill/undotree")
 	use("ahmedkhalf/project.nvim")
+	use("moll/vim-bbye")
+	use("lewis6991/impatient.nvim")
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

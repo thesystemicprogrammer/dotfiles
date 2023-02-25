@@ -22,7 +22,7 @@ neorg.setup({
 					notes = "~/Documents/zk/neorg",
 				},
 				default_workspace = "notes",
-				open_last_workspace = true,
+				open_last_workspace = false,
 			},
 		},
 	},
