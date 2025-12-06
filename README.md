@@ -6,7 +6,6 @@ Personal configuration files and development environment setup.
 
 - **kitty/** - Kitty terminal emulator configuration and themes
 - **nvim/** - Neovim editor configuration with Lua-based plugin setup
-- **opencode/** - OpenCode editor configuration (when backed up)
 - **.zshrc** - Zsh shell configuration with oh-my-zsh and powerlevel10k
 - **.tmux.conf** - Tmux terminal multiplexer configuration
 - **.taskrc** - Taskwarrior task management configuration
