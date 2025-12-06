@@ -15,7 +15,7 @@
 # Use the command 'task show' to see all defaults and overrides
 
 # Files
-data.location=YOUR_DATA_LOCATION
+data.location=$MY_TASKWARRIOR_PATH/tasks
 
 # To use the default location of the XDG directories,
 # move this configuration file from ~/.taskrc to ~/.config/task/taskrc and uncomment below
@@ -39,7 +39,7 @@ data.location=YOUR_DATA_LOCATION
 #include solarized-light-256.theme
 #include no-color.theme
 
-include YOUR/THEME_PATH/dark-yellow-green.theme
+include $MY_TASKWARRIOR_PATH/tasks/themes/dark-yellow-green.theme
 
 news.version=3.4.1
 

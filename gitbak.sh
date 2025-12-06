@@ -104,6 +104,9 @@ sanitize_files() {
 cp -r ~/.config/kitty ~/git_backup
 cp -r ~/.config/nvim ~/git_backup
 
+# Remove spell directory from nvim backup
+rm -rf ~/git_backup/nvim/spell
+
 cp ~/.tmux.conf ~/git_backup
 cp ~/.taskrc ~/git_backup
 cp  ~/.zshrc ~/git_backup
