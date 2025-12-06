@@ -29,6 +29,11 @@ Personal configuration files and development environment setup.
 - Custom keybindings (Ctrl+Space prefix for tmux)
 - Session persistence with tmux-resurrect
 
+### Task Management (Taskwarrior)
+- Configured task management with `.taskrc`
+- Custom data location for cloud storage synchronization
+- Integrated with shell for quick task tracking
+
 ## Installation
 
 1. Clone this repository:
@@ -62,6 +67,7 @@ Personal configuration files and development environment setup.
    - [Neovim](https://neovim.io/) (>= 0.9)
    - [Tmux](https://github.com/tmux/tmux)
    - [Kitty](https://sw.kovidgoyal.net/kitty/)
+   - [Taskwarrior](https://taskwarrior.org/) - Command-line task management
 
 ## Backup
 
