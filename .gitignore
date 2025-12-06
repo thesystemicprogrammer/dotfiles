@@ -1,0 +1,8 @@
+# Exclude OpenCode bun.lock (contains company Artifactory URLs)
+**/bun.lock
+
+# Exclude any potential credential files
+**/*credentials*
+**/*secrets*
+**/.env
+**/.env.*

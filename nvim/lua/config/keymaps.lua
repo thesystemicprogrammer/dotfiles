@@ -14,7 +14,6 @@ keymap("n", "-", "<cmd>Oil --float<CR>", { desc = "Open Parent Directory in Oil"
 keymap(
 	"n",
 	"<Leader>ww",
-	":e /Users/tgdbeth7/OneDrive - Swisscom/Documents/vimwiki/index.md<CR>",
 	{ desc = "Open WIKI Index", noremap = true, silent = true }
 )
 

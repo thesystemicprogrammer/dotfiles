@@ -11,7 +11,6 @@ export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Setup for GOLANG
 export PATH="$PATH:$(go env GOPATH)/bin"
-#export GOPROXY=https://artifactory.swisscom.com/artifactory/api/go/proxy-golang-go-virtual
 
 # Setup for Python
 export PYTHONPYCACHEPREFIX="$HOME/.cache/pycache"
@@ -38,8 +37,6 @@ export npm_config_prefix="$HOME/.local"
 #
 # Export the path to zk notebook
 #
-export ZK_NOTEBOOK_DIR="$HOME/OneDrive - Swisscom/Documents/zk"
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
