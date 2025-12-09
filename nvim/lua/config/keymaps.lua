@@ -13,6 +13,7 @@ vim.keymap.set({ "n", "v", "o" }, "ä", "]", { remap = true })
 keymap("n", "-", "<cmd>Oil --float<CR>", { desc = "Open Parent Directory in Oil" })
 keymap(
 	"n",
+	"e: ~/Documents/wiki/index.md<CR>",
 	"<Leader>ww",
 	{ desc = "Open WIKI Index", noremap = true, silent = true }
 )

@@ -1,4 +1,4 @@
-#id,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description.count,urgencyid,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description.count,urgencid,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description.count,urgencid,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description.count,urgencyyy [Created by task 2.6.2 7/17/2023 20:44:48]
+# [Created by task 2.6.2 12/22/2022 08:01:08]
 # Taskwarrior program configuration file.
 # For more documentation, see https://taskwarrior.org or try 'man task', 'man task-color',
 # 'man task-sync' or 'man taskrc'
@@ -15,7 +15,7 @@
 # Use the command 'task show' to see all defaults and overrides
 
 # Files
-data.location=$MY_TASKWARRIOR_PATH/tasks
+data.location=/home/thomas/.task
 
 # To use the default location of the XDG directories,
 # move this configuration file from ~/.taskrc to ~/.config/task/taskrc and uncomment below
@@ -39,55 +39,4 @@ data.location=$MY_TASKWARRIOR_PATH/tasks
 #include solarized-light-256.theme
 #include no-color.theme
 
-include $MY_TASKWARRIOR_PATH/tasks/themes/dark-yellow-green.theme
-
-news.version=3.4.1
-
-#
-# Urgency Coefficient
-#
-urgency.due.coefficient=+60
-urgency.user.tag.doing.coefficient=+50.0
-urgency.user.tag.backlog.coefficient=-60.0
-urgency.user.tag.waiting.coefficient=-40.0
-urgency.user.tag.regular.coefficient=-80.0
-urgency.user.tag.birthday.coefficient=-50.0
-urgency.user.tag.social.coefficient=-100.0
-
-#
-# Custom Report Settings
-#
-report.birthdays.description=Birthdays and Anniversaries
-report.birthdays.columns=id,due.relative,description.desc
-report.birthdays.labels=ID,Date,Description
-report.birthdays.filter=status:recurring +birthday
-report.birthdays.sort=due+
-
-report.next.columns=id,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,description.count,urgency
-report.next.labels=Id,Age,Depends,Priority,Project,Tags,Recur,Scheduled Countdown,Due,Description,Urgency
-report.next.filter=status:pending -WAITING 
-
-report.zk.description=Zettelkasten Task Copy
-report.zk.columns=description.count
-#report.zk.labels=Description
-report.zk.filter=status:pending -regular
-report.zk.sort=urgency-
-
-#
-# Custom Color Settings 
-#
-#color.due=bold white on red
-color.tag.doing=green
-color.tag.backlog=grey10
-color.tag.waiting=rgb311
-color.tag.jira=grey15
-color.tag.regular=rgb452
-color.tag.social=rgb154
-
-context.sc.read=project:sc
-context.jira.read=+jira
-context.jira.write=+jira
-context.sc.write=project:sc
-context.private.read=-project:sc -jira
-context.birthdays.read=+birthday
-context.birthdays.write=+birthday
+news.version=3.4.2
