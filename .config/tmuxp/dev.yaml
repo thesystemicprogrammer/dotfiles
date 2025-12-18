@@ -1,0 +1,15 @@
+session_name: tsp-blog
+start_window: nvim
+windows:
+  - window_name: nvim
+    start_directory: ~/dev/hugo/tsp-blog
+    panes:
+      - shell_command:
+          - vim .
+  - window_name: shell
+    start_directory: ~/dev/hugo/tsp-blog
+  - window_name: server
+    start_directory: ~/dev/hugo/tsp-blog
+    panes:
+      - shell_command:
+          - hugo server
