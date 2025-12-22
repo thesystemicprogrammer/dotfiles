@@ -139,6 +139,31 @@ if (( $+commands[eza] )); then
   alias tree='eza --tree --icons'
 fi
 
+# System
+alias reload='exec zsh'
+alias zedit='$EDITOR ~/.config/zsh/.zshrc'
+alias zconf='cd ~/.config/zsh && $EDITOR .'
+alias zsource='source ~/.config/zsh/.zshrc'
+
+# Python
+alias py='python3'
+alias pip='python3 -m pip'
+alias venv='python3 -m venv'
+alias activate='source venv/bin/activate'
+alias dactivate='deactivate'
+
+# Utility
+alias path='echo $PATH | tr ":" "\n"'
+alias h='history'
+alias c='clear'
+alias cls='clear'
+if (( $+commands[rg] )); then
+  alias grep='rg'  # Use ripgrep instead
+fi
+if (( $+commands[fd] )); then
+  alias find='fd'  # Use fd instead
+fi
+
 # ================================================================
 # SSH and GPG Key Management
 # ================================================================

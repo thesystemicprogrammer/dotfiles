@@ -1,3 +1,22 @@
+-- Conform - Code Formatting
+--
+-- MANUAL INSTALLATION REQUIRED:
+-- Conform requires external formatters to be installed manually.
+--
+-- Go:
+--   • gofumpt: go install mvdan.cc/gofumpt@latest
+--
+-- Lua:
+--   • stylua: cargo install stylua  OR  brew install stylua
+--
+-- Python:
+--   • black: pip install black  OR  pipx install black
+--
+-- Rust:
+--   • rustfmt: rustup component add rustfmt
+--
+-- After installing, run :ConformInfo to verify formatter availability.
+
 return {
 	"stevearc/conform.nvim",
 	event = { "BufWritePre" },
@@ -29,8 +48,17 @@ return {
 			end
 		end,
 		formatters_by_ft = {
+			go = { "gofumpt" },
+			javascript = { "prettier" },
+			javascriptreact = { "prettier" },
+			json = { "prettier" },
 			lua = { "stylua" },
+			markdown = { "prettier" },
 			python = { "black" },
+			rust = { "rustfmt" },
+			typescript = { "prettier" },
+			typescriptreact = { "prettier" },
+			yaml = { "prettier" },
 			-- Conform can also run multiple formatters sequentially
 			-- python = { "isort", "black" },
 			--

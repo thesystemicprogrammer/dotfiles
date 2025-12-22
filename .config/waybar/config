@@ -1,0 +1,115 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 4,
+    
+    "modules-left": ["niri/workspaces", "custom/separator", "niri/window"],
+    "modules-center": [],
+    "modules-right": ["tray", "network", "bluetooth", "pulseaudio", "backlight", "battery", "clock"],
+
+    "niri/workspaces": {
+        "format": "{index}"
+    },
+
+    "custom/separator": {
+        "format": "|",
+        "tooltip": false
+    },
+
+    "niri/window": {
+        "format": "{}",
+        "max-length": 50,
+        "rewrite": {
+            "(.*) — Mozilla Firefox": "🌎 $1",
+            "(.*) - Google Chrome": "🌎 $1"
+        }
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    },
+
+    "network": {
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": " {ipaddr}/{cidr}",
+        "format-linked": " {ifname} (No IP)",
+        "format-disconnected": "⚠ Disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}\nGateway: {gwaddr}",
+        "on-click": "nm-connection-editor"
+    },
+
+    "bluetooth": {
+        "format": " {status}",
+        "format-connected": " {device_alias}",
+        "format-connected-battery": " {device_alias} ({device_battery_percentage}%)",
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+        "on-click": "blueman-manager"
+    },
+
+    "pulseaudio": {
+        "scroll-step": 2,
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-bluetooth-muted": " {icon}",
+        "format-muted": " {volume}%",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol",
+        "tooltip-format": "{desc}"
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "brightnessctl set 5%-",
+        "tooltip-format": "Brightness: {percent}%"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip-format": "{timeTo}\n{capacity}% - {power}W"
+    },
+
+    "clock": {
+        "format": "{:%a %b %d  %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#b5bd68'><b>{}</b></span>",
+                "days": "<span color='#c5c8c6'>{}</span>",
+                "weeks": "<span color='#81a2be'><b>W{}</b></span>",
+                "weekdays": "<span color='#f0c674'><b>{}</b></span>",
+                "today": "<span color='#cc6666'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    }
+}
